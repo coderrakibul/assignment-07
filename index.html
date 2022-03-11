@@ -1,85 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Insta-Sohor</title>
-        <link rel="stylesheet" href="./css/style.css" />
-        <!-- Latest compiled and minified CSS -->
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-            crossorigin="anonymous"
-        />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insta-Sohor</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Latest compiled and minified CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
 
-        <!-- google Montserrat  font  -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap"
-            rel="stylesheet"
-        />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-            integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-        />
-    </head>
+    <!-- google Montserrat  font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
 
-    <body>
-        <header>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light px-5">
-                <a class="navbar-brand" href="#">Insta-Sohor</a>
-                <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-toggle="collapse"
-                    data-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                >
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light px-5">
+        <a class="navbar-brand" href="#">Insta-Sohor</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-                <div
-                    class="collapse navbar-collapse justify-content-end"
-                    id="navbarSupportedContent"
-                >
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-link active" role="button" onclick="switchTab( 'posts' )">
-                            <i class="fa-solid fa-house"></i>
-                        </li>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-link active" role="button" onclick="switchTab( 'posts' )">
+              <i class="fa-solid fa-house"></i>
+            </li>
 
-                        <li class="nav-link active" role="button" onclick="switchTab( 'liked' )">
-                            <i class="fa-solid fa-heart text-danger"></i>
-                        </li>
+            <li class="nav-link active" role="button" onclick="switchTab( 'liked' )">
+              <i class="fa-solid fa-heart text-danger"></i>
+            </li>
 
-                        <li class="nav-link active" role="button" onclick="switchTab( 'reported' )">
-                            <i class="fa-solid fa-eye-slash"></i>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
-        <main class="main container mx-auto p-3">
-            <div id="posts">
-            </div>
-            <div id="liked">
-                <h1>Liked posts</h1>
-            </div>
+            <li class="nav-link active" role="button" onclick="switchTab( 'reported' )">
+              <i class="fa-solid fa-eye-slash"></i>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="main container mx-auto p-3">
+      <div id="posts"></div>
+      <div id="liked">
+        <h1>Liked posts</h1>
+      </div>
 
-            <div id="reported">
-                <h1>Reported posts</h1>
-            </div>
-        </main>
-        <footer></footer>
+      <div id="reported">
+        <h1>Reported posts</h1>
+      </div>
+    </main>
+    <section class="container mt-5">
+      <div>
+        <div>
+          <h3>প্রশ্ন ১ঃ জাভাস্ক্রিপ্ট কিভাবে কাজ করে?</h3>
+          <p>
+            জাভাস্ক্রিপ্ট একটি প্রোগ্রামিং ল্যাংগুয়েজ। এটি ব্যবহার করা হয় ওয়েবসাইটকে আকর্ষণীয়,
+            ডাইনামিক এবং ইন্টার অ্যাকশন যোগ করার জন্য। তবে বর্তমানে এটি দিয়ে ক্লায়েন্ট সাইড এবং
+            সার্ভার সাইড দুটোই হান্ডেল করা যায়। জাভাস্ক্রিপ্ট কোড গুলো যখন রান করে তখন সিনক্রোনাস
+            ভাবে কোড গুলো রান করে। অর্থাৎ একদম উপর থেকে কোড গুলো রান করতে থাকে। তবে কিছু মেথড আছে
+            যেগুলো অ্যাসিনক্রোনাস ভাবে কাজ করে। অর্থাৎ সব কোড রান করার পর সেই কোড গুলো রান করে যেমন,
+            setTimeout, setInterval, fetch ইত্যাদি। এই কোড গুলো শুরুতে বা শেষে বা যেখানেই থাকুক
+            এগুলো অ্যাসিনক্রোনাস ভাবেই রান হবে।
+          </p>
+        </div>
+        <div>
+          <h3>প্রশ্ন ২ঃ লোকাল স্টোরেজ এবং সেশন স্টোরেজের মধ্যে পার্থক্য কি?</h3>
+          <p>
+            লোকাল স্টোরেজ এনং সেশন স্টোরেজ এই দুটোর কাজ একই সেটা হলো ডাটা সেভ করে রাখা। এখানে ডাটা
+            গুলো কী এবং ভ্যালু হিসেবে থাকে। তবে পার্থক্য হলো এদের
+            মেয়াদে। যেমন, 
+            <br>
+            <strong>লোকাল স্টোরেজে</strong> ডাটা দীর্ঘ সময় সেভ করে রাখা যায়। অর্থাৎ ব্রাউজারে ট্যাব
+            ক্লোজ করে দিলে বা ব্রাউজার বন্ধ করলে বা সিস্টেম রিস্টার্ট করলেও ডাটা থেকেই যায়। তবে
+            চাইলে যখন তখন রিমুভ করে দেয়া যায়। 
+            <br>
+            <strong>সেশন স্টোরেজের</strong> ডাটা স্বল্প মেয়াদী। অর্থাৎ ট্যাব ক্লোজ
+            করে অন্য ট্যাব ওপেন করলে ডাটা গুলো রিমুভ হয়ে যায়। তবে ঐ একই ট্যাবে থেকে পেজ রিফ্রেশ করলে
+            ডাটা রিমুভ হয়না।
+          </p>
+        </div>
+      </div>
+    </section>
+    <footer></footer>
 
-        <!-- add javascript  file  -->
-        <script src="./js/app.js"></script>
-    </body>
+    <!-- add javascript  file  -->
+    <script src="./js/app.js"></script>
+  </body>
 </html>
